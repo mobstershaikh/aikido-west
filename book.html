@@ -3,8 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Request a first class, Aikido West</title>
+<title>Book a first class, Aikido West</title>
 <meta name="description" content="Book a first class at Aikido West in under a minute.">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#182A42">
+<meta property="og:site_name" content="Aikido West">
+<meta property="og:title" content="Book a first class, Aikido West">
+<meta property="og:description" content="Book a first class at Aikido West in under a minute.">
+<meta property="og:image" content="https://mobstershaikh.github.io/aikido-west/assets/stock/kumano_torii.jpg">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/ScrollTrigger.min.js"></script>
@@ -24,6 +32,7 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="grainF"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter></svg>
 <div class="grain" style="filter:url(#grainF)" aria-hidden="true"></div>
 <div class="shell">
@@ -40,19 +49,20 @@
     <a href="organisations.html">For organisations</a>
     <a href="contact.html">Write to us</a>
   </nav>
-  <a class="btn cta" href="book.html">Request a first class</a>
+  <a class="btn cta" href="book.html">Book a first class</a>
 </header>
-<div class="scroll">
+<div class="scroll" id="main">
 <section class="st station tight" style="padding-top:40px"><div class="mark" aria-hidden="true"><span>予約</span></div><div class="inner" style="margin-left:0">
+<p class="proto">Working prototype of the booking flow. Card payment goes live with Stripe before launch; until then, <a href="contact.html">write to us</a> to book.</p>
 <div class="phone" id="phone">
-  <div class="top"><a href="index.html" class="brand" style="display:flex;align-items:center;gap:10px"><span class="seal" style="width:36px;height:36px;font-size:12px;padding:3px" aria-hidden="true"><span>合気</span><span>道西</span></span><span class="display" style="font-size:17px;letter-spacing:.1em">AIKIDO WEST</span></a><div class="dots" aria-label="Progress"><span class="dot on" data-dot="1"></span><span class="dot" data-dot="2"></span><span class="dot" data-dot="3"></span></div></div>
+  <div class="top"><a href="index.html" class="brand" style="display:flex;align-items:center;gap:10px"><span class="seal" style="width:36px;height:36px;font-size:12px;padding:3px" aria-hidden="true"><span>合気</span><span>道西</span></span><span class="display" style="font-size:17px;letter-spacing:.1em">AIKIDO WEST</span></a><p class="small stepno" aria-live="polite">Step <span class="stepn">1</span> of 3</p></div>
   <div class="step" data-step="1">
     <div style="display:flex;flex-direction:column;gap:10px"><p class="note">Your first class, £15</p><h1 class="display" style="font-size:36px">Pick a Saturday.</h1><p class="small">09:30 to 11:30 at the Masbro Centre, W14. Ten places per class. A booked place is a confirmed place.</p></div>
-    <div style="display:flex;flex-direction:column;gap:10px"><button class="slot on" data-slot="0" data-date="Sat 10 Oct"  aria-pressed="true"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 10 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="note" style="font-size:17px">3 of 10 left</span></button><button class="slot " data-slot="1" data-date="Sat 17 Oct"  aria-pressed="false"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 17 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="note" style="font-size:17px">7 of 10 left</span></button><button class="slot " data-slot="2" data-date="Sat 24 Oct" disabled aria-pressed="false"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 24 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="note" style="font-size:17px">full, waitlist</span></button><button class="slot " data-slot="3" data-date="Sat 31 Oct"  aria-pressed="false"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 31 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="note" style="font-size:17px">9 of 10 left</span></button></div>
-    <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px"><button class="btn fill" data-act="next">Book <span class="chosen">Sat 10 Oct</span>, £15</button><p class="small" style="text-align:center">Tracksuit bottoms and a long sleeved top. No experience needed.</p></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><button class="slot on" data-slot="0" data-date="Sat 10 Oct" aria-pressed="true"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 10 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="small" style="color:var(--ink-2)">3 of 10 left</span></button><button class="slot " data-slot="1" data-date="Sat 17 Oct" aria-pressed="false"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 17 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="small" style="color:var(--ink-2)">7 of 10 left</span></button><a class="slot full" href="contact.html"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 24 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="small" style="text-align:right">Full.<br><u>Join the waitlist</u></span></a><button class="slot " data-slot="3" data-date="Sat 31 Oct" aria-pressed="false"><span style="display:flex;flex-direction:column;gap:4px"><span class="display" style="font-size:24px">Sat 31 Oct</span><span class="small">Saturday, 09:30 to 11:30</span></span><span class="small" style="color:var(--ink-2)">9 of 10 left</span></button></div>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px"><button class="btn fill" data-act="next"><span>Book <span class="chosen">Sat 10 Oct</span>, £15</span></button><p class="small" style="text-align:center">Tracksuit bottoms and a long sleeved top. No experience needed.</p></div>
   </div>
   <div class="step" data-step="2" hidden>
-    <div style="display:flex;flex-direction:column;gap:10px"><p class="note"><span class="chosen">Sat 10 Oct</span>, 09:30</p><h1 class="display" style="font-size:36px">About you.</h1><p class="small">One minute. The health note goes only to sensei.</p></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><p class="note"><span>Saturday <span class="chosen">10 Oct</span>, 09:30</span></p><h1 class="display" style="font-size:36px">About you.</h1><p class="small">One minute. The health note goes only to sensei.</p></div>
     <form style="display:flex;flex-direction:column;gap:20px" aria-label="Your details">
       <label for="b-name">Full name<input id="b-name" type="text" name="name" autocomplete="name"></label>
       <label for="b-email">Email<input id="b-email" type="email" name="email" autocomplete="email"></label>
@@ -60,6 +70,7 @@
       <label for="b-health">Injuries or health conditions we should know about<input id="b-health" type="text" name="health" placeholder="None"></label>
       <label class="check" for="b-adult"><input id="b-adult" type="checkbox" name="adult"><span>I am eighteen or over.</span></label>
       <label class="check" for="b-waiver"><input id="b-waiver" type="checkbox" name="waiver"><span>I have read the participation waiver and I understand aikido is a contact martial art.</span></label>
+      <label class="check" for="b-consent"><input id="b-consent" type="checkbox" name="consent"><span>I consent to Aikido West holding my health answers so that I can be taught safely. They are seen only by the instructor and deleted when I stop training. <a href="privacy.html">Privacy</a>.</span></label>
     </form>
     <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px"><button class="btn fill" data-act="next">Continue to payment</button><button class="btn" data-act="back">Change the date</button></div>
   </div>
@@ -67,8 +78,8 @@
     <div style="display:flex;flex-direction:column;gap:10px"><p class="note">Last step</p><h1 class="display" style="font-size:36px">Pay £15.</h1></div>
     <div style="border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:12px">
       <div style="display:flex;justify-content:space-between;gap:12px"><span>A first class</span><span class="display" style="font-size:24px">£15.00</span></div>
-      <div style="display:flex;justify-content:space-between;gap:12px"><span><span class="chosen">Sat 10 Oct</span>, 09:30 to 11:30</span><span class="small">Masbro Centre</span></div>
-      <p class="small">Your place is held for ten minutes while you pay. Cancel up to 24 hours before for a full refund.</p>
+      <div style="display:flex;justify-content:space-between;gap:12px"><span>Saturday <span class="chosen">10 Oct</span>, 09:30 to 11:30</span><span class="small">Masbro Centre</span></div>
+      <p class="small">Your place is held for ten minutes while you pay. Cancel up to 24 hours before for a full refund. <a href="terms.html">Terms</a>.</p>
     </div>
     <button class="btn fill" data-act="next">Pay with Apple Pay or Google Pay</button>
     <p class="small" style="text-align:center">or by card</p>
@@ -81,7 +92,7 @@
   </div>
   <div class="step done" data-step="4" hidden>
     <p class="kanji" style="font-size:56px;line-height:1;color:var(--shu)" aria-hidden="true">礼</p>
-    <div style="display:flex;flex-direction:column;gap:10px"><p class="note">Booked and paid</p><h1 class="display" style="font-size:36px">See you <span class="chosen">Sat 10 Oct</span> at 09:20.</h1><p class="prose">Ten minutes early, so sensei can show you how to bow in and how to fall before the class begins.</p></div>
+    <div style="display:flex;flex-direction:column;gap:10px"><p class="note">Booked and paid</p><h1 class="display" style="font-size:36px">See you on the <span class="chosen">10 Oct</span> at 09:20.</h1><p class="prose">Ten minutes early, so sensei can show you how to bow in and how to fall before the class begins.</p></div>
     <div class="rows">
       <div class="row" style="padding:14px 0"><p class="k">Where</p><p class="v">Masbro Centre, 87 Masbro Road, W14 0LR</p></div>
       <div class="row" style="padding:14px 0"><p class="k">Wear</p><p class="v">Tracksuit bottoms, long sleeves</p></div>
@@ -95,18 +106,18 @@
 </div>
 <footer class="foot">
   <div class="cols">
-    <div><p class="t">Aikido West</p><p>Traditional aikido in Brook Green, in the line of Kanetsuka Sensei. Affiliated to the British Aikido Federation and recognised by the Aikikai Foundation, Hombu Dojo, Tokyo.</p></div>
+    <div><p class="t">Aikido West</p><p>Traditional aikido in Brook Green, in the line of Kanetsuka Sensei. A member dojo of the British Aikido Federation, recognised by the Aikikai Foundation, Hombu Dojo, Tokyo.</p></div>
     <div><p class="t">Visit</p><p>Masbro Centre<br>87 Masbro Road<br>London W14 0LR</p></div>
     <div><p class="t">Train</p><p>Saturday, 09:30 to 11:30<br>Every week<br>Adults, eighteen and over</p></div>
     <div><p class="t">Write</p><p><a href="mailto:aikidowest@hotmail.com">aikidowest@hotmail.com</a><br><a href="https://www.instagram.com/aikidowestdojo">Instagram</a></p></div>
   </div>
-  <div class="base"><p>Aikido West, Brook Green. <a href="times.html">Times and fees</a></p><p>Booking flow shown as a working prototype; card payment goes live with Stripe.</p></div>
+  <div class="base"><p>Aikido West, Brook Green. <a href="times.html">Times and fees</a> <span class="sep">·</span> <a href="privacy.html">Privacy</a> <span class="sep">·</span> <a href="terms.html">Terms</a></p><p>Sixty seconds to book. Two hours to find out.</p></div>
 </footer>
 </div>
 <script src="assets/site.js"></script>
 <script>
-(function(){var step=1,picked=0;var dates=['Sat 10 Oct','Sat 17 Oct','Sat 24 Oct','Sat 31 Oct'];
-function render(){document.querySelectorAll('.step').forEach(function(d){d.hidden=(d.getAttribute('data-step')!==String(step));});for(var i=1;i<=3;i++){var dot=document.querySelector('[data-dot="'+i+'"]');if(dot)dot.className='dot'+(step>=i?' on':'');}document.querySelectorAll('.chosen').forEach(function(c){c.textContent=dates[picked];});document.getElementById('phone').scrollTop=0;}
+(function(){var step=1,picked=0;var dates=['10 Oct','17 Oct','24 Oct','31 Oct'];
+function render(){document.querySelectorAll('.step').forEach(function(d){d.hidden=(d.getAttribute('data-step')!==String(step));});var sn=document.querySelector('.stepn');if(sn)sn.textContent=String(Math.min(step,3));document.querySelectorAll('.chosen').forEach(function(c){c.textContent=dates[picked];});document.getElementById('phone').scrollTop=0;}
 document.querySelectorAll('[data-slot]').forEach(function(b){b.addEventListener('click',function(){if(b.disabled)return;picked=+b.getAttribute('data-slot');document.querySelectorAll('[data-slot]').forEach(function(x){if(!x.disabled){x.classList.remove('on');x.setAttribute('aria-pressed','false');}});b.classList.add('on');b.setAttribute('aria-pressed','true');render();});});
 document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var a=b.getAttribute('data-act');if(a==='next')step=Math.min(4,step+1);if(a==='back')step=Math.max(1,step-1);if(a==='restart'){step=1;picked=0;}render();});});
 render();})();

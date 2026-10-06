@@ -247,3 +247,30 @@ textarea{min-height:120px;resize:vertical}
 .plate.light .text .note{color:var(--grey)}
 .plate.light .lead{color:var(--ink-2)}
 .plate.light .btn{color:var(--ink);border-color:var(--line-strong)}.plate.light .btn:hover{background:var(--ink);color:var(--paper)}
+
+/* v6.2 */
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 14px;z-index:100}.skip:focus{left:8px}
+.sep{color:var(--grey);margin:0 4px}
+.hero6 .mark6{font-size:clamp(48px,5.4vw,80px);letter-spacing:.16em;text-shadow:0 2px 24px rgba(24,42,66,.55)}
+.ink-in{opacity:0;filter:blur(8px);animation:inkin 2.2s cubic-bezier(.2,.7,.2,1) .15s forwards}
+@keyframes inkin{to{opacity:1;filter:blur(0)}}
+@media (prefers-reduced-motion: reduce){.ink-in{animation:none;opacity:1;filter:none}}
+.hero6 .proof{font-size:13px;color:rgba(246,244,238,.66);letter-spacing:.01em}
+.hero6 .proof .sep{color:rgba(246,244,238,.4)}
+.st .mark span{font-size:26px;letter-spacing:.3em}
+.plate .sumi{position:absolute;inset:0;width:100%;height:100%;display:block;filter:invert(1);mix-blend-mode:multiply;opacity:.55;pointer-events:none}
+.plate .text .note,.full .text .note{color:rgba(246,244,238,.86)}
+.plate.light .text .note{color:var(--ink-2)}
+.duo figcaption{color:#F6F4EE;text-shadow:0 1px 14px rgba(0,0,0,.7)}
+.proto{font-size:13px;color:var(--grey);border:1px solid var(--line);padding:10px 14px;max-width:390px;margin:0 auto 18px;text-align:center}
+.proto a{text-decoration:underline}
+.stepno{color:var(--grey)}
+.slot.full{opacity:.7;text-decoration:none}
+.slot.full:hover{opacity:1;border-color:var(--ink)}
+.q .m{font-size:22px;color:var(--ink);line-height:1}
+.phone .btn{display:inline-flex}
+@supports (animation-timeline: view()){
+  .duo figure,.two > figure.frame{clip-path:inset(0 0 10% 0);opacity:.6;animation:lift linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+  @keyframes lift{to{clip-path:inset(0 0 0 0);opacity:1}}
+}
+@media (prefers-reduced-motion: reduce){.duo figure,.two > figure.frame{animation:none;clip-path:none;opacity:1}}

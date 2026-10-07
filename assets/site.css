@@ -315,3 +315,22 @@ p,li{text-wrap:pretty}
 html.nav-ready body{animation:pagein .5s ease both}
 @keyframes pagein{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion: reduce){::view-transition-old(root),::view-transition-new(root){animation:none}html.nav-ready body{animation:none}}
+
+/* crest and mark (v6.7) */
+.mon{display:block;width:40px;height:40px;color:var(--ink);flex:0 0 auto}
+.hero6 .nav .mon,.night .mon{color:#F5F4F0}
+.crest{display:block;color:var(--ink)}
+.crest.lg{width:132px;height:132px;color:#F5F4F0;margin-bottom:6px}
+.foot .crest{width:76px;height:76px;margin-bottom:16px}
+.night .foot .crest{color:var(--night-text)}
+.good .tile .crestimg{display:block;width:58%;height:58%;color:var(--ink)}.good .tile .crestimg svg{display:block;width:100%;height:100%}
+.night .good .tile .crestimg{color:var(--night-text)}
+@media(max-width:900px){.crest.lg{width:104px;height:104px}}
+/* mobile nav: one scrolling row; the hero grows instead of colliding (v6.7) */
+@media(max-width:900px){
+  .nav{gap:14px 20px;padding-top:18px;padding-bottom:12px}
+  .nav .links{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;gap:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px;-webkit-mask-image:linear-gradient(to right,#000 88%,transparent);mask-image:linear-gradient(to right,#000 88%,transparent)}
+  .nav .links::-webkit-scrollbar{display:none}
+  .hero6{height:auto;min-height:clamp(600px,92vh,860px)}
+  .hero6 .body{padding-top:150px}
+}

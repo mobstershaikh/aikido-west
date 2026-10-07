@@ -4,45 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Aikido West</title>
-<meta name="description" content="Aikido in Brook Green, West London, taught the traditional way. Saturday mornings and Tuesday evenings. Any age, any level. Come once and see.">
-<meta name="theme-color" content="#0B0B0C">
+<meta name="description" content="Aikido in Brook Green, West London. Saturday mornings and Tuesday evenings. Any age, any level. Come once and see.">
+<meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="../assets/mon/mark.svg">
 <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <meta property="og:title" content="Aikido West">
-<meta property="og:description" content="Aikido in Brook Green, West London, taught the traditional way. Come once and see.">
+<meta property="og:description" content="Aikido in Brook Green, West London. Come once and see.">
 <meta property="og:image" content="https://mobstershaikh.github.io/aikido-west/assets/mon/aikido-west-lockup-night.png">
-<link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/photo/gravel_spiral.jpg" as="image" crossorigin>
-<link rel="preload" href="assets/depth/gravel_spiral_depth.png" as="image" crossorigin>
-<link rel="stylesheet" href="assets/dream.css">
+<link rel="preload" href="assets/fonts/inter-tight-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/room.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
 <canvas id="gl" aria-hidden="true"></canvas>
-<div class="curtain" id="curtain" aria-hidden="true"></div>
+<div class="frame" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
 
 <div class="gate" id="gate" role="dialog" aria-label="Enter Aikido West">
   <div class="inner">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" class="crest patch" role="img" aria-label="Aikido West crest, cut out"><mask id="mgate" maskUnits="userSpaceOnUse" x="-50" y="-50" width="100" height="100"><circle cx="0" cy="0" r="47" fill="none" stroke="#fff" stroke-width="0.9"/><circle cx="0" cy="0" r="43.5" fill="#fff"/><circle cx="0" cy="0" r="18.8" fill="none" stroke="#000" stroke-width="2.8"/><g fill="#000" transform="translate(0,0.8) scale(0.44)"><path d="M-2.00,-31.00 L5.00,-31.00 L4.00,-25.50 L-22.00,-2.50 L-28.00,-4.00 L-26.00,-9.50 Z" fill="#000"/><path d="M3.00,-27.00 L7.50,-29.50 L19.00,-14.50 L31.00,-4.50 L27.50,0.50 L18.50,-3.50 L10.00,-13.00 Z" fill="#000"/><path d="M-3.50,-32.50 L7.00,-32.50 L8.00,-27.50 L0.50,-26.00 L-3.50,-28.50 Z" fill="#000"/><path d="M-15.50,-0.50 L13.00,-0.50 L16.50,-2.40 L16.00,4.00 L-15.50,4.00 Z" fill="#000"/><path d="M-12,9 H12.5 V27.5 H-12 Z M-7.2,14 V22.6 H7.2 V14 Z" fill-rule="evenodd"/></g><path d="M19.09,14.00 L24.18,19.09 L27.72,27.72 L19.09,24.18 L14.00,19.09 Z" fill="#000"/><path d="M18.81,10.61 L20.79,12.59 L12.59,20.79 L10.61,18.81 Z" fill="#000"/><path d="M13.72,10.89 L16.26,13.44 L13.44,16.26 L10.89,13.72 Z" fill="#000"/><path d="M17.68,17.68 L23.76,23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/><path d="M-14.00,19.09 L-19.09,24.18 L-27.72,27.72 L-24.18,19.09 L-19.09,14.00 Z" fill="#000"/><path d="M-10.61,18.81 L-12.59,20.79 L-20.79,12.59 L-18.81,10.61 Z" fill="#000"/><path d="M-10.89,13.72 L-13.44,16.26 L-16.26,13.44 L-13.72,10.89 Z" fill="#000"/><path d="M-17.68,17.68 L-23.76,23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/><path d="M-19.09,-14.00 L-24.18,-19.09 L-27.72,-27.72 L-19.09,-24.18 L-14.00,-19.09 Z" fill="#000"/><path d="M-18.81,-10.61 L-20.79,-12.59 L-12.59,-20.79 L-10.61,-18.81 Z" fill="#000"/><path d="M-13.72,-10.89 L-16.26,-13.44 L-13.44,-16.26 L-10.89,-13.72 Z" fill="#000"/><path d="M-17.68,-17.68 L-23.76,-23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/><path d="M14.00,-19.09 L19.09,-24.18 L27.72,-27.72 L24.18,-19.09 L19.09,-14.00 Z" fill="#000"/><path d="M10.61,-18.81 L12.59,-20.79 L20.79,-12.59 L18.81,-10.61 Z" fill="#000"/><path d="M10.89,-13.72 L13.44,-16.26 L16.26,-13.44 L13.72,-10.89 Z" fill="#000"/><path d="M17.68,-17.68 L23.76,-23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/></mask><rect x="-50" y="-50" width="100" height="100" fill="currentColor" mask="url(#mgate)"/></svg>
+    <span class="dot" aria-hidden="true"></span>
     <p class="name">Aikido West</p>
     <p class="kan">合気道西</p>
     <div class="choices">
-      <button class="btn shu" type="button" id="enter-sound">Enter with sound</button>
+      <button class="btn red" type="button" id="enter-sound">Enter with sound</button>
       <button class="btn" type="button" id="enter-quiet">In silence</button>
     </div>
-    <p class="note small">A three-minute score made in the browser: strings, a temple bell, one tune, and the wooden clappers of the theatre. Nothing plays until you choose; it can be stopped at the top of any page.</p>
+    <p class="note">A beat made in the browser: Rhodes, sub bass, a koto, vinyl, the wooden blocks. 170 beats a minute, two and a quarter minutes, then round again. Nothing plays until you choose. The light breathes with it.</p>
   </div>
 </div>
 
-<header class="bar">
-  <a class="brand" href="index.html" aria-label="Aikido West, home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" class="mon" aria-hidden="true"><circle cx="0" cy="0" r="47" fill="none" stroke="currentColor" stroke-width="0.9"/><circle cx="0" cy="0" r="42" fill="none" stroke="currentColor" stroke-width="4.4"/><g fill="currentColor" transform="translate(0,1.0) scale(0.98)"><path d="M-2.00,-31.00 L5.00,-31.00 L4.00,-25.50 L-22.00,-2.50 L-28.00,-4.00 L-26.00,-9.50 Z" fill="currentColor"/><path d="M3.00,-27.00 L7.50,-29.50 L19.00,-14.50 L31.00,-4.50 L27.50,0.50 L18.50,-3.50 L10.00,-13.00 Z" fill="currentColor"/><path d="M-3.50,-32.50 L7.00,-32.50 L8.00,-27.50 L0.50,-26.00 L-3.50,-28.50 Z" fill="currentColor"/><path d="M-15.50,-0.50 L13.00,-0.50 L16.50,-2.40 L16.00,4.00 L-15.50,4.00 Z" fill="currentColor"/><path d="M-12,9 H12.5 V27.5 H-12 Z M-7.2,14 V22.6 H7.2 V14 Z" fill-rule="evenodd"/></g></svg><span class="name">Aikido West</span></a>
-  <div class="right">
-    <button class="tb" type="button" id="snd" aria-pressed="false" aria-label="Sound off"><i aria-hidden="true"></i><span>Sound</span></button>
-    <button class="tb" type="button" id="menu-open" aria-expanded="false" aria-controls="menu">Menu</button>
-    <a class="btn book" href="../book.html">Book a first class</a>
-  </div>
-</header>
+<div class="corner tl"><a href="index.html" aria-label="Aikido West, home" style="display:flex;align-items:center;gap:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" class="mon" aria-hidden="true"><circle cx="0" cy="0" r="47" fill="none" stroke="currentColor" stroke-width="0.9"/><circle cx="0" cy="0" r="42" fill="none" stroke="currentColor" stroke-width="4.4"/><g fill="currentColor" transform="translate(0,1.0) scale(0.98)"><path d="M-2.00,-31.00 L5.00,-31.00 L4.00,-25.50 L-22.00,-2.50 L-28.00,-4.00 L-26.00,-9.50 Z" fill="currentColor"/><path d="M3.00,-27.00 L7.50,-29.50 L19.00,-14.50 L31.00,-4.50 L27.50,0.50 L18.50,-3.50 L10.00,-13.00 Z" fill="currentColor"/><path d="M-3.50,-32.50 L7.00,-32.50 L8.00,-27.50 L0.50,-26.00 L-3.50,-28.50 Z" fill="currentColor"/><path d="M-15.50,-0.50 L13.00,-0.50 L16.50,-2.40 L16.00,4.00 L-15.50,4.00 Z" fill="currentColor"/><path d="M-12,9 H12.5 V27.5 H-12 Z M-7.2,14 V22.6 H7.2 V14 Z" fill-rule="evenodd"/></g></svg><span class="name">Aikido West</span></a></div>
+<div class="corner tr">
+  <button class="tb" type="button" id="snd" aria-pressed="false" aria-label="Sound off"><i aria-hidden="true"></i><span>Sound</span></button>
+  <button class="tb" type="button" id="menu-open" aria-expanded="false" aria-controls="menu">Menu</button>
+  <a class="btn red book" href="../book.html">Book a first class</a>
+</div>
+<div class="corner bl">51.5002° N &nbsp; 0.2161° W &nbsp;·&nbsp; Brook Green</div>
+<div class="corner br counter"><b id="cnum">01</b>&nbsp;/&nbsp;08</div>
 
 <div class="menu" id="menu" aria-hidden="true">
   <button class="close" type="button" id="menu-close">Close</button>
@@ -56,178 +55,160 @@
     <a href="../contact.html"><small>07</small>Write to us</a>
     <a href="../book.html"><small>08</small>Book a first class</a>
   </nav>
-  <div class="foot"><p class="small">The Masbro Centre, 87 Masbro Road, London W14 0LR</p><p class="small"><a href="../index.html">The classic edition</a></p></div>
+  <div class="mfoot"><span>The Masbro Centre, 87 Masbro Road, London W14 0LR</span><a href="../index.html">The classic edition</a></div>
 </div>
 
 <main class="page" id="main">
 
-  <section class="ch open tall" data-scene="open" id="c-open">
-    <div class="veil" aria-hidden="true"></div>
-    <div class="c">
-      <p class="cap">Brook Green &nbsp;·&nbsp; London</p>
-      <h1 class="d d1">Aikido West</h1>
-      <div class="sub"><span class="cap">Saturday mornings</span><span class="sep" aria-hidden="true"></span><span class="cap">Tuesday evenings</span></div>
-      <p class="lead">Aikido, taught the traditional way, in a calm hall in West London. Any age, any level, no experience needed. Come once and see.</p>
-      <div class="sub"><a class="btn shu" href="../book.html">Book a first class</a><a class="btn" href="#c-ed">What to expect</a></div>
-    </div>
-    <div class="cue" aria-hidden="true"></div>
-    <p class="place">A raked garden, Kyoto</p>
+  <section class="ch tall" data-scene="open" id="c1">
+    <div class="lph" aria-hidden="true" style="--gs:1"><img src="assets/photo/throw_wide.jpg" alt="" loading="lazy" decoding="async"></div>
+    <p class="lab reveal"><span class="dotr" aria-hidden="true"></span>01 &nbsp; The dark room &nbsp;·&nbsp; Brook Green, London</p>
+    <h1 class="big reveal">Aikido<span class="l2">West</span></h1>
+    <p class="txt reveal">Aikido in a calm hall in West London, taught the traditional way. Saturday mornings and Tuesday evenings. Any age, any level, no experience needed. Come once and see.</p>
+    <div class="row reveal"><a class="btn red" href="../book.html">Book a first class</a><a class="btn" href="#c6">What to expect</a></div>
+    <p class="jp" aria-hidden="true">合気道</p>
   </section>
 
-  <section class="ch left tall" data-scene="still" id="c-still">
-    <div class="veil" aria-hidden="true"></div>
-    <div class="c">
-      <p class="k" aria-hidden="true">静</p>
-      <p class="cap">Stillness</p>
-      <h2 class="d d2">Before anything happens, the room is quiet.</h2>
-      <p class="lead">That quiet is the first thing you learn and the first thing you take home. In an hour on the mat the noise of the week goes out of the body.</p>
-    </div>
+  <section class="ch tall right" data-scene="still" id="c2">
+    <div class="lph" aria-hidden="true" style="--gs:0"><img src="assets/photo/koi_pair.jpg" alt="" loading="lazy" decoding="async"></div>
+    <p class="lab reveal"><span class="dotr" aria-hidden="true"></span>02 &nbsp; Stillness</p>
+    <h2 class="mid reveal">Before anything happens, the room is quiet.</h2>
+    <p class="txt reveal">That quiet is the first thing you learn and the first thing you take home. In an hour on the mat the noise of the week goes out of the body.</p>
+    <p class="jp" aria-hidden="true">静</p>
   </section>
 
-  <section class="plate" data-scene="plate" id="c-plate">
-    <div class="wrap">
-      <canvas id="enso" aria-label="An ensō, a circle drawn in one stroke of ink"></canvas>
-      <div class="inside" id="inside"><p class="k">合気道</p><p class="cap">ai · ki · dō</p></div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" class="crest patch seal" role="img" aria-label="Aikido West crest, cut out"><mask id="mseal" maskUnits="userSpaceOnUse" x="-50" y="-50" width="100" height="100"><circle cx="0" cy="0" r="47" fill="none" stroke="#fff" stroke-width="0.9"/><circle cx="0" cy="0" r="43.5" fill="#fff"/><circle cx="0" cy="0" r="18.8" fill="none" stroke="#000" stroke-width="2.8"/><g fill="#000" transform="translate(0,0.8) scale(0.44)"><path d="M-2.00,-31.00 L5.00,-31.00 L4.00,-25.50 L-22.00,-2.50 L-28.00,-4.00 L-26.00,-9.50 Z" fill="#000"/><path d="M3.00,-27.00 L7.50,-29.50 L19.00,-14.50 L31.00,-4.50 L27.50,0.50 L18.50,-3.50 L10.00,-13.00 Z" fill="#000"/><path d="M-3.50,-32.50 L7.00,-32.50 L8.00,-27.50 L0.50,-26.00 L-3.50,-28.50 Z" fill="#000"/><path d="M-15.50,-0.50 L13.00,-0.50 L16.50,-2.40 L16.00,4.00 L-15.50,4.00 Z" fill="#000"/><path d="M-12,9 H12.5 V27.5 H-12 Z M-7.2,14 V22.6 H7.2 V14 Z" fill-rule="evenodd"/></g><path d="M19.09,14.00 L24.18,19.09 L27.72,27.72 L19.09,24.18 L14.00,19.09 Z" fill="#000"/><path d="M18.81,10.61 L20.79,12.59 L12.59,20.79 L10.61,18.81 Z" fill="#000"/><path d="M13.72,10.89 L16.26,13.44 L13.44,16.26 L10.89,13.72 Z" fill="#000"/><path d="M17.68,17.68 L23.76,23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/><path d="M-14.00,19.09 L-19.09,24.18 L-27.72,27.72 L-24.18,19.09 L-19.09,14.00 Z" fill="#000"/><path d="M-10.61,18.81 L-12.59,20.79 L-20.79,12.59 L-18.81,10.61 Z" fill="#000"/><path d="M-10.89,13.72 L-13.44,16.26 L-16.26,13.44 L-13.72,10.89 Z" fill="#000"/><path d="M-17.68,17.68 L-23.76,23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/><path d="M-19.09,-14.00 L-24.18,-19.09 L-27.72,-27.72 L-19.09,-24.18 L-14.00,-19.09 Z" fill="#000"/><path d="M-18.81,-10.61 L-20.79,-12.59 L-12.59,-20.79 L-10.61,-18.81 Z" fill="#000"/><path d="M-13.72,-10.89 L-16.26,-13.44 L-13.44,-16.26 L-10.89,-13.72 Z" fill="#000"/><path d="M-17.68,-17.68 L-23.76,-23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/><path d="M14.00,-19.09 L19.09,-24.18 L27.72,-27.72 L24.18,-19.09 L19.09,-14.00 Z" fill="#000"/><path d="M10.61,-18.81 L12.59,-20.79 L20.79,-12.59 L18.81,-10.61 Z" fill="#000"/><path d="M10.89,-13.72 L13.44,-16.26 L16.26,-13.44 L13.72,-10.89 Z" fill="#000"/><path d="M17.68,-17.68 L23.76,-23.76" stroke="#fff" stroke-width="0.9" stroke-linecap="round"/></mask><rect x="-50" y="-50" width="100" height="100" fill="currentColor" mask="url(#mseal)"/></svg>
-    </div>
-    <div class="side" id="side">
-      <p class="cap">What aikido is</p>
-      <p class="d d3">A circle, not a collision.</p>
-      <p>Aikido is a Japanese martial art built on circles. Force is received, turned and returned, so that nobody is harmed and nothing is forced. You learn to stay calm when pushed, to move from your centre, and to put a person on the floor without hurting them.</p>
-      <p>There is no competition. The only person you are measured against is the one you were last month.</p>
-    </div>
+  <section class="ch circle tall" data-scene="circle" id="c3">
+    <p class="lab reveal"><span class="dotr" aria-hidden="true"></span>03 &nbsp; The circle</p>
+    <div class="wrap"><canvas id="circle" aria-label="A circle drawn in light"></canvas><div class="head" id="head" aria-hidden="true"></div><div class="inside" id="inside"><p class="k">合気道</p><p class="cap">ai · ki · dō</p></div></div>
+    <div class="side" id="side"><h2 class="mid">A circle, not a collision.</h2><p>Aikido is a Japanese martial art built on circles. Force is received, turned and returned, so that nobody is harmed and nothing is forced. You learn to stay calm when pushed, to move from your centre, and to put a person on the floor without hurting them.</p><p>There is no competition. The only person you are measured against is the one you were last month.</p></div>
+    <p class="jp" aria-hidden="true">円</p>
   </section>
 
-  <section class="ch right tall" data-scene="koi" id="c-koi">
-    <div class="veil" aria-hidden="true"></div>
-    <div class="c">
-      <p class="k" aria-hidden="true">結</p>
-      <p class="cap">Connection</p>
-      <h2 class="d d2">Every technique needs a partner.</h2>
-      <p class="lead">You learn as much from receiving as from leading, and the partner you throw is the one who will catch you. Classes are small. Everyone is seen.</p>
-    </div>
+  <section class="ch tall" data-scene="hands" id="c4">
+    <div class="lph" aria-hidden="true" style="--gs:1"><img src="assets/photo/hands.jpg" alt="" loading="lazy" decoding="async"></div>
+    <p class="lab reveal"><span class="dotr" aria-hidden="true"></span>04 &nbsp; Connection</p>
+    <h2 class="mid reveal">Every technique needs a partner.</h2>
+    <p class="txt reveal">You learn as much from receiving as from leading, and the partner you throw is the one who will catch you. Classes are small. Everyone is seen.</p>
+    <p class="jp" aria-hidden="true">結</p>
   </section>
 
-  <section class="ch teacher tall" data-scene="teacher" id="c-teacher">
-    <div class="veil" aria-hidden="true"></div>
-    <div class="c">
-      <p class="k" aria-hidden="true">師</p>
-      <p class="cap">The teacher</p>
-      <h2 class="d d2">Arabella Braun, 5th Dan.</h2>
-      <div class="names"><span>Aikikai, Hombu Dojo, Tokyo</span><span>Thirty years in the line of Minoru Kanetsuka Sensei</span></div>
-      <p class="lead">The art reaches you as it reached her: by hand, corrected gently, one movement at a time.</p>
-    </div>
-    <p class="place">Arabella Braun at the Masbro Centre</p>
+  <section class="ch tall right" data-scene="teacher" id="c5">
+    <div class="lph" aria-hidden="true" style="--gs:1"><img src="assets/photo/sensei_bokken.jpg" alt="" loading="lazy" decoding="async"></div>
+    <p class="lab reveal"><span class="dotr" aria-hidden="true"></span>05 &nbsp; The teacher</p>
+    <h2 class="mid reveal">Arabella Braun, 5th Dan.</h2>
+    <p class="txt reveal">Aikikai, Hombu Dojo, Tokyo. Thirty years in the line of Minoru Kanetsuka Sensei. The art reaches you as it reached her: by hand, corrected gently, one movement at a time.</p>
+    <p class="jp" aria-hidden="true">師</p>
   </section>
 
-  <section class="ed" data-scene="ed" id="c-ed">
+  <section class="white" data-scene="white" id="c6">
     <div class="in">
-      <div class="head">
-        <div><p class="cap">Your first class</p><h2 class="d d2">Come as you are.</h2></div>
-        <p>Wear loose clothes you can move in and bring water. Everything else is provided, including patience. A first class is booked online and costs what it says; nothing follows unless you decide it should.</p>
-      </div>
+      <p class="lab"><span class="dotr" aria-hidden="true"></span>06 &nbsp; Your first class</p>
+      <h2 class="mid">Come as you are.</h2>
+      <p class="intro">Wear loose clothes you can move in and bring water. Everything else is provided, including patience. A first class is booked online and costs what it says; nothing follows unless you decide it should.</p>
       <div class="cols">
-        <div><p class="cap">What happens</p><h3>A bow, and ninety minutes.</h3><p>A warm-up, learning to fall safely, two or three techniques with a partner, a bow, and tea. You will be tired in a good way.</p></div>
-        <div><p class="cap">Who comes</p><h3>People like you.</h3><p>People who sit at desks all day. People who have done other arts. People who have done nothing at all. Adults of every age and build, in the same class.</p></div>
-        <div><p class="cap">What it costs</p><h3>Every fee on one page.</h3><p>No contracts and no hidden extras. Membership, the six-week course and a first class are all set out plainly. <a href="../times.html">Times and fees</a></p></div>
+        <div class="c"><p class="n">What happens</p><h3>A bow, and ninety minutes.</h3><p>A warm-up, learning to fall safely, two or three techniques with a partner, a bow, and tea. Tired in a good way.</p></div>
+        <div class="c"><p class="n">Who comes</p><h3>People like you.</h3><p>People who sit at desks all day. People who have done other arts. People who have done nothing at all. Adults of every age and build, in the same class.</p></div>
+        <div class="c"><p class="n">What it costs</p><h3>Every fee on one page.</h3><p>No contracts and no hidden extras. Membership, the six-week course and a first class, set out plainly. <a href="../times.html">Times and fees</a></p></div>
+        <div class="c"><p class="n">When</p><h3>Saturday. Tuesday.</h3><p>Saturday, 09:30 to 11:30. Tuesday evening, two hours. Adults, eighteen and over.</p></div>
       </div>
-      <div class="band">
-        <figure><img src="assets/photo/tea_room.jpg" alt="A tatami room opening onto a garden" loading="lazy" decoding="async"></figure>
-        <div class="t"><p class="cap">The hall</p><p class="d d3">A plain room off Brook Green.</p><p>The Masbro Centre, 87 Masbro Road, London W14 0LR. About ten minutes on foot from Olympia and Shepherd's Bush, fifteen from Hammersmith. Changing rooms, a swept mat, and a kettle.</p><p><a class="btn ink" href="../contact.html">Write to us</a></p></div>
+      <div class="hall">
+        <figure><img src="assets/photo/teaching_wide.jpg" alt="The hall at the Masbro Centre during a class" loading="lazy" decoding="async"></figure>
+        <div class="t"><p class="n">The hall</p><h3>A plain room off Brook Green.</h3><p>The Masbro Centre, 87 Masbro Road, London W14 0LR. About ten minutes on foot from Olympia and Shepherd's Bush, fifteen from Hammersmith. Changing rooms, a swept mat, and a kettle.</p><p><a class="btn k" href="../contact.html">Write to us</a></p></div>
       </div>
     </div>
   </section>
 
-  <section class="ch tall" data-scene="gate" id="c-gate">
-    <div class="veil" aria-hidden="true"></div>
-    <div class="c">
-      <p class="k" aria-hidden="true">門</p>
-      <p class="cap">The door</p>
-      <h2 class="d d2">Come once. Decide after.</h2>
-      <p class="lead">No experience, no uniform, no promise. Book a first class and the rest follows.</p>
-      <div class="sub"><a class="btn shu" href="../book.html">Book a first class</a><a class="btn" href="../times.html">Times and fees</a></div>
-    </div>
-    <p class="place">Fushimi Inari, Kyoto</p>
+  <section class="ch tall" data-scene="door" id="c7">
+    <p class="lab reveal"><span class="dotr" aria-hidden="true"></span>07 &nbsp; The door</p>
+    <h2 class="big reveal">Come<span class="l2">once.</span></h2>
+    <p class="txt reveal">Decide after. No experience, no uniform, no promise. Book a first class and the rest follows.</p>
+    <div class="row reveal"><a class="btn red" href="../book.html">Book a first class</a><a class="btn" href="../times.html">Times and fees</a></div>
+    <p class="jp" aria-hidden="true">門</p>
   </section>
 
-  <section class="ch fin" data-scene="fin" id="c-fin">
-    <div class="veil" aria-hidden="true"></div>
-    <div class="c">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" class="crest" role="img" aria-label="Aikido West crest"><mask id="mfin" maskUnits="userSpaceOnUse" x="-50" y="-50" width="100" height="100"><circle cx="0" cy="0" r="47" fill="none" stroke="#fff" stroke-width="0.9"/><circle cx="0" cy="0" r="42" fill="none" stroke="#fff" stroke-width="4.4"/><circle cx="0" cy="0" r="18.8" fill="none" stroke="#fff" stroke-width="2.8"/><g fill="#fff" transform="translate(0,0.8) scale(0.44)"><path d="M-2.00,-31.00 L5.00,-31.00 L4.00,-25.50 L-22.00,-2.50 L-28.00,-4.00 L-26.00,-9.50 Z" fill="#fff"/><path d="M3.00,-27.00 L7.50,-29.50 L19.00,-14.50 L31.00,-4.50 L27.50,0.50 L18.50,-3.50 L10.00,-13.00 Z" fill="#fff"/><path d="M-3.50,-32.50 L7.00,-32.50 L8.00,-27.50 L0.50,-26.00 L-3.50,-28.50 Z" fill="#fff"/><path d="M-15.50,-0.50 L13.00,-0.50 L16.50,-2.40 L16.00,4.00 L-15.50,4.00 Z" fill="#fff"/><path d="M-12,9 H12.5 V27.5 H-12 Z M-7.2,14 V22.6 H7.2 V14 Z" fill-rule="evenodd"/></g><path d="M19.09,14.00 L24.18,19.09 L27.72,27.72 L19.09,24.18 L14.00,19.09 Z" fill="#fff"/><path d="M18.81,10.61 L20.79,12.59 L12.59,20.79 L10.61,18.81 Z" fill="#fff"/><path d="M13.72,10.89 L16.26,13.44 L13.44,16.26 L10.89,13.72 Z" fill="#fff"/><path d="M17.68,17.68 L23.76,23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/><path d="M-14.00,19.09 L-19.09,24.18 L-27.72,27.72 L-24.18,19.09 L-19.09,14.00 Z" fill="#fff"/><path d="M-10.61,18.81 L-12.59,20.79 L-20.79,12.59 L-18.81,10.61 Z" fill="#fff"/><path d="M-10.89,13.72 L-13.44,16.26 L-16.26,13.44 L-13.72,10.89 Z" fill="#fff"/><path d="M-17.68,17.68 L-23.76,23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/><path d="M-19.09,-14.00 L-24.18,-19.09 L-27.72,-27.72 L-19.09,-24.18 L-14.00,-19.09 Z" fill="#fff"/><path d="M-18.81,-10.61 L-20.79,-12.59 L-12.59,-20.79 L-10.61,-18.81 Z" fill="#fff"/><path d="M-13.72,-10.89 L-16.26,-13.44 L-13.44,-16.26 L-10.89,-13.72 Z" fill="#fff"/><path d="M-17.68,-17.68 L-23.76,-23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/><path d="M14.00,-19.09 L19.09,-24.18 L27.72,-27.72 L24.18,-19.09 L19.09,-14.00 Z" fill="#fff"/><path d="M10.61,-18.81 L12.59,-20.79 L20.79,-12.59 L18.81,-10.61 Z" fill="#fff"/><path d="M10.89,-13.72 L13.44,-16.26 L16.26,-13.44 L13.72,-10.89 Z" fill="#fff"/><path d="M17.68,-17.68 L23.76,-23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/></mask><rect x="-50" y="-50" width="100" height="100" fill="currentColor" mask="url(#mfin)"/></svg>
-      <p class="d d2 it">Aikido West</p>
-      <p class="cap">Brook Green &nbsp;·&nbsp; London &nbsp;·&nbsp; 合気道西</p>
-    </div>
-    <p class="place">Mount Fuji from the lake, before dawn</p>
+  <section class="ch fin" data-scene="fin" id="c8">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" class="crest" role="img" aria-label="Aikido West crest"><mask id="mfin" maskUnits="userSpaceOnUse" x="-50" y="-50" width="100" height="100"><circle cx="0" cy="0" r="47" fill="none" stroke="#fff" stroke-width="0.9"/><circle cx="0" cy="0" r="42" fill="none" stroke="#fff" stroke-width="4.4"/><circle cx="0" cy="0" r="18.8" fill="none" stroke="#fff" stroke-width="2.8"/><g fill="#fff" transform="translate(0,0.8) scale(0.44)"><path d="M-2.00,-31.00 L5.00,-31.00 L4.00,-25.50 L-22.00,-2.50 L-28.00,-4.00 L-26.00,-9.50 Z" fill="#fff"/><path d="M3.00,-27.00 L7.50,-29.50 L19.00,-14.50 L31.00,-4.50 L27.50,0.50 L18.50,-3.50 L10.00,-13.00 Z" fill="#fff"/><path d="M-3.50,-32.50 L7.00,-32.50 L8.00,-27.50 L0.50,-26.00 L-3.50,-28.50 Z" fill="#fff"/><path d="M-15.50,-0.50 L13.00,-0.50 L16.50,-2.40 L16.00,4.00 L-15.50,4.00 Z" fill="#fff"/><path d="M-12,9 H12.5 V27.5 H-12 Z M-7.2,14 V22.6 H7.2 V14 Z" fill-rule="evenodd"/></g><path d="M19.09,14.00 L24.18,19.09 L27.72,27.72 L19.09,24.18 L14.00,19.09 Z" fill="#fff"/><path d="M18.81,10.61 L20.79,12.59 L12.59,20.79 L10.61,18.81 Z" fill="#fff"/><path d="M13.72,10.89 L16.26,13.44 L13.44,16.26 L10.89,13.72 Z" fill="#fff"/><path d="M17.68,17.68 L23.76,23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/><path d="M-14.00,19.09 L-19.09,24.18 L-27.72,27.72 L-24.18,19.09 L-19.09,14.00 Z" fill="#fff"/><path d="M-10.61,18.81 L-12.59,20.79 L-20.79,12.59 L-18.81,10.61 Z" fill="#fff"/><path d="M-10.89,13.72 L-13.44,16.26 L-16.26,13.44 L-13.72,10.89 Z" fill="#fff"/><path d="M-17.68,17.68 L-23.76,23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/><path d="M-19.09,-14.00 L-24.18,-19.09 L-27.72,-27.72 L-19.09,-24.18 L-14.00,-19.09 Z" fill="#fff"/><path d="M-18.81,-10.61 L-20.79,-12.59 L-12.59,-20.79 L-10.61,-18.81 Z" fill="#fff"/><path d="M-13.72,-10.89 L-16.26,-13.44 L-13.44,-16.26 L-10.89,-13.72 Z" fill="#fff"/><path d="M-17.68,-17.68 L-23.76,-23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/><path d="M14.00,-19.09 L19.09,-24.18 L27.72,-27.72 L24.18,-19.09 L19.09,-14.00 Z" fill="#fff"/><path d="M10.61,-18.81 L12.59,-20.79 L20.79,-12.59 L18.81,-10.61 Z" fill="#fff"/><path d="M10.89,-13.72 L13.44,-16.26 L16.26,-13.44 L13.72,-10.89 Z" fill="#fff"/><path d="M17.68,-17.68 L23.76,-23.76" stroke="#000" stroke-width="0.9" stroke-linecap="round"/></mask><rect x="-50" y="-50" width="100" height="100" fill="currentColor" mask="url(#mfin)"/></svg>
+    <p class="name">Aikido West</p>
+    <p class="cap">Brook Green &nbsp;·&nbsp; London &nbsp;·&nbsp; 合気道西</p>
   </section>
 
 </main>
 
 <footer class="foot">
   <div class="cols">
-    <div><p class="cap">Aikido West</p><p>Aikido in Brook Green, in the line of Kanetsuka Sensei. A member dojo of the British Aikido Federation, recognised by the Aikikai Foundation, Hombu Dojo, Tokyo.</p></div>
-    <div><p class="cap">Visit</p><p>Masbro Centre<br>87 Masbro Road<br>London W14 0LR</p></div>
-    <div><p class="cap">Train</p><p>Saturday, 09:30 to 11:30<br>Tuesday evening, two hours<br>Adults, eighteen and over</p></div>
-    <div><p class="cap">Write</p><p><a href="mailto:aikidowest@hotmail.com">aikidowest@hotmail.com</a><br><a href="https://www.instagram.com/aikidowestdojo">Instagram</a></p></div>
+    <div><p class="n">Aikido West</p><p>Aikido in Brook Green, in the line of Kanetsuka Sensei. A member dojo of the British Aikido Federation, recognised by the Aikikai Foundation, Hombu Dojo, Tokyo.</p></div>
+    <div><p class="n">Visit</p><p>Masbro Centre<br>87 Masbro Road<br>London W14 0LR</p></div>
+    <div><p class="n">Train</p><p>Saturday, 09:30 to 11:30<br>Tuesday evening, two hours<br>Adults, eighteen and over</p></div>
+    <div><p class="n">Write</p><p><a href="mailto:aikidowest@hotmail.com">aikidowest@hotmail.com</a><br><a href="https://www.instagram.com/aikidowestdojo">Instagram</a></p></div>
   </div>
-  <div class="base"><p><a href="../times.html">Times and fees</a> &nbsp;·&nbsp; <a href="../privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms</a> &nbsp;·&nbsp; <a href="../index.html">The classic edition</a></p><p>Photographs via Unsplash by Fabrizio Chiagano, Milo Weiler, Mihai Avram, Junsheng Chen, Se. Tsuchiya and katsuma tanaka. Depth, fog, the ensō and the score are made in the browser.</p></div>
+  <div class="base"><p><a href="../times.html">Times and fees</a> &nbsp;·&nbsp; <a href="../privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="../terms.html">Terms</a> &nbsp;·&nbsp; <a href="../index.html">The classic edition</a></p><p>The koi by Mihai Avram, via Unsplash. The rest are the dojo's own. Light, depth and the beat are made in the browser.</p></div>
 </footer>
 
 <script type="module">
-import { createStage } from './assets/js/stage.js';
-import { prepareEnso, animateEnso } from './assets/js/enso.js';
-import { Score } from './assets/js/score.js';
+import { Beat } from './assets/js/beat.js';
+import { lightCircle, animateCircle } from './assets/js/circle.js';
 const REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const MOBILE = matchMedia('(max-width: 900px)').matches || navigator.maxTouchPoints > 1;
 const PHOTOS = {
-  open:    { src: 'assets/photo/gravel_spiral.jpg', depth: 'assets/depth/gravel_spiral_depth.png', grade: 0.15, fog: 0.18, shaft: 0.3, zoom: [1.08, 1.2], focus: [0.5, 0.5], shade: [0.5, 0.7], parallax: 0.022 },
-  still:   { src: 'assets/photo/smoke_black.jpg', depth: 'assets/depth/smoke_black_depth.png', grade: 0.2, fog: 0.0, shaft: 0.0, zoom: [1.0, 1.1], focus: [0.5, 0.52], shade: [0.1, 0.2], parallax: 0.014 },
-  koi:     { src: 'assets/photo/koi_pair.jpg', depth: 'assets/depth/koi_pair_depth.png', grade: 0.0, fog: 0.08, shaft: 0.0, zoom: [1.0, 1.1], focus: [0.5, 0.5], shade: [0.3, 0.3], parallax: 0.016 },
-  teacher: { src: 'assets/photo/sensei_bokken.jpg', depth: 'assets/depth/sensei_bokken_depth.png', grade: 1.0, fog: 0.08, shaft: 0.4, zoom: [1.0, 1.08], focus: [0.5, 0.42], shade: [0.25, 0.25], parallax: 0.014 },
-  gate:    { src: 'assets/photo/gates_inari.jpg', depth: 'assets/depth/gates_inari_depth.png', grade: 0.0, fog: 0.4, shaft: 0.35, zoom: [1.12, 1.28], focus: [0.5, 0.5], shade: [0.5, 0.55], parallax: 0.022 },
-  fin:     { src: 'assets/photo/fuji_lake.jpg', depth: 'assets/depth/fuji_lake_depth.png', grade: 0.0, fog: 0.5, shaft: 0.3, zoom: [1.06, 1.16], focus: [0.5, 0.55], shade: [0.55, 0.5], parallax: 0.018 },
+  open:    { src: 'assets/photo/throw_wide.jpg', depth: 'assets/depth/throw_wide_depth.png', grade: 1, zoom: [1.04, 1.12], focus: [0.5, 0.5] },
+  still:   { src: 'assets/photo/koi_pair.jpg', depth: 'assets/depth/koi_pair_depth.png', grade: 0, zoom: [1.0, 1.08], focus: [0.5, 0.5] },
+  hands:   { src: 'assets/photo/hands.jpg', depth: 'assets/depth/hands_depth.png', grade: 1, zoom: [1.0, 1.08], focus: [0.5, 0.5] },
+  teacher: { src: 'assets/photo/sensei_bokken.jpg', depth: 'assets/depth/sensei_bokken_depth.png', grade: 1, zoom: [1.0, 1.06], focus: [0.5, 0.42] },
 };
-const gate = document.getElementById('gate'), sndBtn = document.getElementById('snd'), curtain = document.getElementById('curtain');
-const score = new Score();
-let stage = null;
-try { stage = await createStage(document.getElementById('gl'), PHOTOS, { ground: '#0B0B0C', fog: '#C9C4BA' }); await stage.load('open'); }
-catch (e) { console.warn('stage', e); document.getElementById('gl').style.display = 'none'; }
+const LOOK = {
+  open: { rad: 0.42, glow: 1.05, ambient: 0.1, beam: 0.55 }, still: { rad: 0.4, glow: 1.0, ambient: 0.05, beam: 0.15 }, circle: { rad: 0.3, glow: 0.55, ambient: 0, beam: 0 },
+  hands: { rad: 0.36, glow: 1.0, ambient: 0.05, beam: 0.25 }, teacher: { rad: 0.3, glow: 1.1, ambient: 0.03, beam: 0.8 }, white: { rad: 0.3, glow: 0, ambient: 0, beam: 0 }, door: { rad: 0.34, glow: 0.6, ambient: 0, beam: 0.45 }, fin: { rad: 0.3, glow: 0.35, ambient: 0, beam: 0.2 },
+};
+const beat = new Beat(); const gate = document.getElementById('gate'), sndBtn = document.getElementById('snd');
+let light = null;
+if (MOBILE || REDUCE) document.body.classList.add('lite');
+else {
+  try { const m = await import('./assets/js/light.js'); light = await m.createLight(document.getElementById('gl'), PHOTOS); await light.load('open'); }
+  catch (e) { console.warn('light', e); document.body.classList.add('lite'); }
+}
+// the lite light: a moving radial mask, driven by pointer, touch, and a slow drift
+const lite = { x: 0.5, y: 0.55, tx: 0.5, ty: 0.55, last: 0 };
+function liteTick(now) { const idle = (now - lite.last) / 1000; if (idle > 2 || REDUCE) { const t = now / 1000 * 0.17; lite.tx = 0.5 + 0.28 * Math.sin(t * 0.9) * Math.cos(t * 0.37); lite.ty = 0.5 + 0.22 * Math.sin(t * 0.63 + 1.3); } lite.x += (lite.tx - lite.x) * (REDUCE ? 1 : 0.05); lite.y += (lite.ty - lite.y) * (REDUCE ? 1 : 0.05); document.documentElement.style.setProperty('--lx', (lite.x * 100).toFixed(2) + '%'); document.documentElement.style.setProperty('--ly', (lite.y * 100).toFixed(2) + '%'); }
 
-const ORDER = [ { id: 'c-open', photo: 'open' }, { id: 'c-still', photo: 'still' }, { id: 'c-plate', dom: true }, { id: 'c-koi', photo: 'koi' }, { id: 'c-teacher', photo: 'teacher' }, { id: 'c-ed', dom: true }, { id: 'c-gate', photo: 'gate' }, { id: 'c-fin', photo: 'fin' } ];
-ORDER.forEach(o => o.el = document.getElementById(o.id));
+const ORDER = ['open', 'still', 'circle', 'hands', 'teacher', 'white', 'door', 'fin'].map((s, i) => ({ s, el: document.getElementById('c' + (i + 1)) }));
 const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-let bone = false, drawn = false;
-const enso = prepareEnso(document.getElementById('enso'), { radius: 0.37 });
-function tick() {
+let drawn = false; const circle = lightCircle(document.getElementById('circle'), { radius: 0.36 });
+const cnum = document.getElementById('cnum'), prog = document.getElementById('prog');
+function tick(now) {
   const mid = innerHeight * 0.5; let cur = 0;
   for (let i = 0; i < ORDER.length; i++) { const r = ORDER[i].el.getBoundingClientRect(); if (r.top <= mid) cur = i; }
   const o = ORDER[cur], r = o.el.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (mid - r.top) / r.height)); const nxt = ORDER[cur + 1];
-  if (stage) {
-    const b = nxt ? (nxt.photo || null) : null;
-    if (o.dom) stage.setScene(b, 0, b, 0, 0); else stage.setScene(o.photo, p, b, 0, nxt && !nxt.dom ? smooth(0.8, 1.0, p) : 0);
-    if (nxt && nxt.photo) stage.load(nxt.photo); if (ORDER[cur + 2] && ORDER[cur + 2].photo) stage.load(ORDER[cur + 2].photo);
-  }
-  const wantBone = !!o.dom; if (wantBone !== bone) { bone = wantBone; document.body.classList.toggle('bone', bone); }
-  if (o.id === 'c-plate' && !drawn && p > 0.22) { drawn = true; score.taiko(); animateEnso(enso, REDUCE ? 0.01 : 1.9, () => { document.getElementById('inside').classList.add('show'); document.querySelector('.plate .seal').classList.add('show'); }); document.getElementById('side').classList.add('show'); }
+  if (light) {
+    const a = PHOTOS[o.s] ? o.s : null, b = nxt && PHOTOS[nxt.s] ? nxt.s : null;
+    light.setScene(a, p, b, 0, nxt ? smooth(0.8, 1.0, p) : 0, LOOK[o.s]);
+    if (b) light.load(b); if (ORDER[cur + 2] && PHOTOS[ORDER[cur + 2].s]) light.load(ORDER[cur + 2].s);
+    light.pulse(beat.pulse()); light.render(now);
+  } else liteTick(now);
+  cnum.textContent = String(cur + 1).padStart(2, '0');
+  const h = document.documentElement; prog.style.transform = 'scaleX(' + (scrollY / Math.max(1, h.scrollHeight - innerHeight)).toFixed(4) + ')';
+  if (o.s === 'circle' && !drawn && p > 0.2) { drawn = true; beat.taiko(); animateCircle(circle, document.getElementById('head'), REDUCE ? 0.01 : 2.6, () => { document.getElementById('inside').classList.add('show'); }); setTimeout(() => document.getElementById('side').classList.add('show'), 900); }
+  requestAnimationFrame(tick);
 }
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.25 });
-document.querySelectorAll('.ch:not(.open)').forEach(s => io.observe(s));
-addEventListener('pointermove', e => { if (stage) stage.setMouse((e.clientX / innerWidth - 0.5) * 2, (e.clientY / innerHeight - 0.5) * 2); }, { passive: true });
-function loop(now) { tick(); if (stage) stage.render(now); requestAnimationFrame(loop); }
-requestAnimationFrame(loop);
-addEventListener('resize', () => { if (drawn) { const e2 = prepareEnso(document.getElementById('enso'), { radius: 0.37 }); e2.to(1); e2.bleed(); } });
+requestAnimationFrame(tick);
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.2 });
+document.querySelectorAll('.ch').forEach(s => io.observe(s));
+addEventListener('pointermove', e => { const x = e.clientX / innerWidth, y = e.clientY / innerHeight; if (light) light.pointer(x, y); else { lite.tx = x; lite.ty = y; lite.last = performance.now(); } }, { passive: true });
+addEventListener('touchmove', e => { const t = e.touches[0]; if (!t) return; lite.tx = t.clientX / innerWidth; lite.ty = t.clientY / innerHeight; lite.last = performance.now(); }, { passive: true });
+addEventListener('resize', () => { if (drawn) { const c2 = lightCircle(document.getElementById('circle'), { radius: 0.36 }); c2.to(1); } });
 
 let entered = false;
 function enter(withSound) {
   if (entered) return; entered = true;
-  if (withSound) { score.start(); sndBtn.setAttribute('aria-pressed', 'true'); sndBtn.setAttribute('aria-label', 'Sound on'); }
-  curtain.classList.add('go'); setTimeout(() => { gate.classList.add('off'); }, 350); setTimeout(() => gate.remove(), 1900);
-  setTimeout(() => document.getElementById('c-open').classList.add('in'), 900);
+  if (withSound) { beat.start(); sndBtn.setAttribute('aria-pressed', 'true'); sndBtn.setAttribute('aria-label', 'Sound on'); }
+  gate.classList.add('off'); setTimeout(() => gate.remove(), 1200);
+  setTimeout(() => document.getElementById('c1').classList.add('in'), 300);
 }
 document.getElementById('enter-sound').addEventListener('click', () => enter(true));
 document.getElementById('enter-quiet').addEventListener('click', () => enter(false));
 addEventListener('wheel', () => enter(false), { once: true, passive: true });
 addEventListener('touchmove', () => enter(false), { once: true, passive: true });
 addEventListener('keydown', e => { if (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter') enter(false); }, { once: true });
-sndBtn.addEventListener('click', () => { const on = score.toggle(); sndBtn.setAttribute('aria-pressed', String(on)); sndBtn.setAttribute('aria-label', on ? 'Sound on' : 'Sound off'); });
+sndBtn.addEventListener('click', () => { const on = beat.toggle(); sndBtn.setAttribute('aria-pressed', String(on)); sndBtn.setAttribute('aria-label', on ? 'Sound on' : 'Sound off'); });
 const menu = document.getElementById('menu'), mo = document.getElementById('menu-open');
 const setMenu = v => { menu.classList.toggle('open', v); menu.setAttribute('aria-hidden', String(!v)); mo.setAttribute('aria-expanded', String(v)); };
 mo.addEventListener('click', () => setMenu(true)); document.getElementById('menu-close').addEventListener('click', () => setMenu(false));

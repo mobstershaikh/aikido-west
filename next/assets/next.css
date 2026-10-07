@@ -1,0 +1,99 @@
+/* Aikido West, the frontier edition. The page sits on one WebGL stage; the type is the same hand as the classic edition. */
+html,body{background:var(--night);color:var(--night-text)}
+body.day{background:var(--paper);color:var(--ink)}
+#gl{position:fixed;inset:0;z-index:0;display:block;width:100vw;height:100vh}
+.shell{position:relative;z-index:1}
+.skip{position:absolute;left:-999px;top:8px;background:var(--paper);color:var(--ink);padding:8px 12px;z-index:100}.skip:focus{left:8px}
+
+/* the gate */
+.gate{position:fixed;inset:0;z-index:60;background:var(--night);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;transition:opacity 1.2s ease}
+.gate.off{opacity:0;pointer-events:none}
+.gate .inner{display:flex;flex-direction:column;align-items:center;max-width:560px}
+.gate .crest{width:132px;height:132px;color:#F5F4F0;margin-bottom:30px;opacity:0;animation:gatein 1.6s ease .2s forwards}
+.gate h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,50px);letter-spacing:.03em;line-height:1;color:#F5F4F0;opacity:0;animation:gatein 1.4s ease .7s forwards}
+.gate .k{font-family:var(--kanji);letter-spacing:.42em;color:var(--night-grey);font-size:14px;margin:14px 0 36px;opacity:0;animation:gatein 1.4s ease .9s forwards}
+.gate .choices{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:gatein 1.2s ease 1.2s forwards}
+.gate .btn{color:#F5F4F0;border-color:rgba(246,244,238,.5)}.gate .btn:hover{background:#F5F4F0;color:var(--ink);border-color:#F5F4F0}
+.gate .btn.fill{background:#F5F4F0;color:var(--ink);border-color:#F5F4F0}
+.gate .note{font-size:13px;line-height:1.5;color:var(--night-grey);margin-top:26px;max-width:46ch;opacity:0;animation:gatein 1.2s ease 1.6s forwards}
+@keyframes gatein{to{opacity:1}}
+
+/* the nav, fixed, over the stage */
+.nav{position:fixed;left:0;right:0;top:0;z-index:20;padding:22px var(--gutter);border-bottom:0;background:linear-gradient(to bottom,rgba(24,42,66,.55),rgba(24,42,66,0));transition:background 1.2s ease}
+body.day .nav{background:linear-gradient(to bottom,rgba(246,244,238,.75),rgba(246,244,238,0))}
+.nav .links a,.nav .name,.nav .mon,.nav .btn{color:#F5F4F0;transition:color 1.2s ease,border-color 1.2s ease}
+.nav .links a{opacity:.82}.nav .links a:hover,.nav .links a.on{opacity:1;border-bottom-color:#F5F4F0}
+.nav .btn{border-color:rgba(246,244,238,.5)}
+body.day .nav .links a,body.day .nav .name,body.day .nav .mon,body.day .nav .btn{color:var(--ink)}
+body.day .nav .btn{border-color:var(--line-strong)}body.day .nav .links a:hover,body.day .nav .links a.on{border-bottom-color:var(--ink)}
+.snd{display:inline-flex;align-items:center;gap:10px;min-height:40px;padding:0 12px;border:0;background:transparent;font:500 13px var(--sans);letter-spacing:.02em;cursor:pointer;color:inherit}
+.snd i{display:inline-block;width:8px;height:8px;border-radius:50%;border:1px solid currentColor;transition:background .4s}
+.snd[aria-pressed="true"] i{background:currentColor}
+
+/* the scenes */
+.sc{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:160px var(--gutter) 84px calc(var(--margin) + var(--gutter))}
+.sc.tall{min-height:150vh}
+.sc .shade{position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(to top,rgba(24,42,66,.82) 0%,rgba(24,42,66,.35) 55%,rgba(24,42,66,0) 100%);pointer-events:none}
+.sc .text{position:relative;max-width:1240px;display:flex;flex-direction:column;gap:22px;opacity:0;transform:translateY(22px);transition:opacity 1.4s cubic-bezier(.2,.7,.2,1),transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.sc.in .text{opacity:1;transform:none}
+.sc .h1,.sc .h2{color:#F5F4F0;max-width:14ch}
+.sc .lead{color:rgba(246,244,238,.88);max-width:58ch}
+.sc .prose{color:rgba(246,244,238,.86)}
+.sc .preface{color:rgba(246,244,238,.72)}.sc .preface .k{color:#F5F4F0}
+.sc .btn{color:#F5F4F0;border-color:rgba(246,244,238,.55)}.sc .btn:hover{background:#F5F4F0;color:var(--ink);border-color:#F5F4F0}
+.sc .btn.fill{background:#F5F4F0;color:var(--ink);border-color:#F5F4F0}.sc .btn.fill:hover{background:#fff;border-color:#fff}
+.sc .place{position:absolute;right:var(--gutter);bottom:30px;font-size:12.5px;color:rgba(246,244,238,.62);letter-spacing:.01em;max-width:46ch;text-align:right}
+.sc .mark{position:absolute;left:calc(var(--margin) * .5 - 14px);top:50%;transform:translateY(-50%)}
+.sc .mark span{color:#F5F4F0}.sc .mark span:before{background:#F5F4F0}
+.sc .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.sc .proof{font-size:13px;color:rgba(246,244,238,.66)}
+.hero7 .mark6{font-family:var(--brush);font-size:clamp(48px,5.4vw,80px);line-height:1;letter-spacing:.16em;color:#F6F4EE;opacity:0;transition:opacity 1.2s ease}
+.hero7 .mark6.show{opacity:1}
+.hero7 .text{opacity:0;transform:translateY(22px)}
+.hero7.in .text{opacity:1;transform:none}
+.hero7 .text > :not(.mark6){opacity:0;transition:opacity 1.6s ease .2s}
+.hero7.in .text > :not(.mark6){opacity:1}
+
+/* the line: four names */
+.names{display:grid;grid-template-columns:1fr;gap:0;max-width:820px}
+.names p{font-family:var(--serif);font-size:clamp(26px,3vw,46px);line-height:1.05;padding:18px 0;border-top:1px solid rgba(246,244,238,.22);display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;color:#F5F4F0}
+.names p:last-child{border-bottom:1px solid rgba(246,244,238,.22)}
+.names p em{font-family:var(--sans);font-style:normal;font-size:14px;color:rgba(246,244,238,.68);max-width:36ch;text-align:right}
+
+/* the paper scenes */
+.paper{background:var(--paper);color:var(--ink);justify-content:center;padding-top:140px;padding-bottom:140px}
+.paper .h2{color:var(--ink);max-width:16ch}.paper .preface{color:var(--grey)}.paper .preface .k{color:var(--ai)}
+.paper .prose{color:var(--ink-2)}.paper .mark span{color:var(--ink)}.paper .mark span:before{background:var(--ink)}
+.paper .text{opacity:1;transform:none}
+.paper .btn{color:var(--ink);border-color:var(--line-strong)}.paper .btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.paper .btn.fill{background:var(--ink);color:var(--paper);border-color:var(--ink)}.paper .btn.fill:hover{background:var(--ai);border-color:var(--ai);color:#fff}
+.inkplate{position:relative;height:72vh;min-height:460px;margin:48px 0 0;background:var(--paper-2);overflow:hidden}
+.inkplate:before{content:"";position:absolute;inset:0;background:url(../../assets/stock/ink_wash.jpg) center/cover;opacity:.28;filter:grayscale(1) contrast(1.05)}
+.inkplate canvas{position:absolute;inset:0;width:100%;height:100%;display:block;filter:invert(1);mix-blend-mode:multiply;opacity:.62}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-top:28px;border-top:1px solid var(--line);padding-top:36px}
+.four div{display:flex;flex-direction:column;gap:12px}
+.four .k{font-family:var(--brush);font-size:38px;line-height:1;color:var(--ink)}
+.four h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1}
+.four p{font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+
+/* footer on paper */
+.foot{position:relative;z-index:1;background:var(--paper)}
+.edition{font-size:13px;color:var(--grey)}
+
+@media(max-width:900px){
+  .sc{padding:140px var(--gutter) 64px var(--gutter);min-height:100svh}
+  .sc.tall{min-height:130svh}
+  .sc .mark{display:none}
+  .sc .h1,.sc .h2{max-width:none}
+  .sc .place{position:static;text-align:left;margin-top:18px}
+  .four{grid-template-columns:1fr 1fr;gap:26px}
+  .names p em{text-align:left;max-width:none}
+  .inkplate{height:56vh;min-height:360px}
+  .gate .crest{width:104px;height:104px}
+  .nav{padding:18px var(--gutter) 12px}
+}
+@media (prefers-reduced-motion: reduce){
+  .sc .text,.hero7 .text,.hero7 .text > :not(.mark6){opacity:1;transform:none;transition:none}
+  .hero7 .mark6{opacity:1}
+  .gate .crest,.gate h1,.gate .k,.gate .choices,.gate .note{animation:none;opacity:1}
+}

@@ -57,7 +57,7 @@ body.lite #gl{display:none}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.25);opacity:1}}
 
 /* the menu */
-.menu{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.96);display:flex;flex-direction:column;justify-content:center;padding:0 var(--gutter);opacity:0;pointer-events:none;transition:opacity .5s ease}
+.menu{position:fixed;inset:0;z-index:50;background:#000;display:flex;flex-direction:column;justify-content:center;padding:0 var(--gutter);opacity:0;pointer-events:none;transition:opacity .5s ease}
 .menu.open{opacity:1;pointer-events:auto}
 .menu .close{position:absolute;top:calc(var(--in) + 8px);right:calc(var(--in) + 18px);background:transparent;border:0;color:var(--w);font:500 11px var(--sans);letter-spacing:.26em;text-transform:uppercase;cursor:pointer;min-height:40px;padding:0 10px}
 .menu nav{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;max-width:1200px;margin:0 auto;width:100%}
